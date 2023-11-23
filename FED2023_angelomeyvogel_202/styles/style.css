@@ -1,0 +1,255 @@
+/* CSS Document */
+*, *::after, *::before {
+  box-sizing:border-box;
+}
+ /* rootstyle */
+:root {
+  /* h'tjes style */
+  --h-font: Debussy;
+  --h-kleurtjes: white;
+  /* p style */
+  --p-color: white;
+  --p-font: sans-serif;
+}
+
+/* de titels h'tjes en p'tjes */
+
+body {
+  background-color: whitesmoke;
+}
+
+/* menu nav hamburger menu'tje via */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+div:first-of-type {
+    display: none;
+}
+
+span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+ul:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+a:first-of-type {
+  font-family: var(--h-font);
+  font-size: 3em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: orange;
+  padding-top: 0.5em;
+}
+
+@media only screen and (max-width: 768px) {
+    ul:first-of-type {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    ul:first-of-type.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    div:first-of-type {
+        display: block;
+        cursor: pointer;
+    }
+
+    div:first-of-type.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    div:first-of-type.active span:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    div:first-of-type.active span:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+/* h1 {
+  font-family: var(--h-font);
+  font-size: 3em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: orange;
+  padding-top: 0.5em;
+} */
+
+h2 {
+  font-family: var(--h-font);
+  font-size: 4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--h-kleurtjes);
+  padding-top: 0.5em;
+
+}
+
+h3 {
+  font-family: var(--h-font);
+  font-size: 4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: orange;
+  padding-top: 0.5em;
+
+}
+
+h4 {
+  font-family: var(--h-font);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hotpink;
+  padding-top: 0.5em;
+}
+
+p {
+  font-family: var(--p-font);
+  color: var(--p-color);
+  padding-top: 0.5em;
+  letter-spacing: 0.05em;
+}
+
+main {
+  position: relative;
+}
+
+/* header */
+header {
+}
+
+/* voor de tekst in de sections */
+section {
+  position: relative;
+  align-items: center;
+  margin: 0.75em;
+  padding-bottom: 2em;
+}
+
+/* de boxjes in section:nth-of-type */
+
+
+/* 1st */
+section:first-of-type {
+  background-color: burlywood;
+  border-radius: 1.5em;
+  text-align: center;
+}
+
+/* 2nd */
+section:nth-of-type(2) {
+  background-color: deeppink;
+  border-radius: 1.5em;
+  text-align: center;
+}
+
+
+/* 3rd */
+section:nth-of-type(3) {
+  background-color: #71c5e8;
+  border-radius: 1.5em;
+  text-align: center;
+}
+
+/* 3rd */
+section:nth-of-type(3) {
+  background-color: #71c5e8;
+  border-radius: 1.5em;
+  text-align: center;
+}
+
+section:nth-of-type(3) h1 {
+}
+
+/* 4th */
+section:nth-of-type(4) h2 {
+  margin-top: 0.2em;
+  margin-bottom: 0.3em;
+}
+
+div:first-of-type {
+  background-color: white;
+  border-radius: 1.5em;
+  padding-left: 1.5em;
+}
+
+div:nth-of-type(2) {
+  background-color: white;
+  border-radius: 1.5em;
+  padding-left: 1.5em;
+}
+
+div:nth-of-type(3) {
+  background-color: white;
+  border-radius: 1.5em;
+  padding-left: 1.5em;
+}
+
+/* last */
+section:last-of-type {
+  background-color: skyblue;
+  border-radius: 1.5em;
+  text-align: center;
+}
+
+/* footer */
+footer {
+  background-color: orange;
+  border-radius: 1.5em;
+}
